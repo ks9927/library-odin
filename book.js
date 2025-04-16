@@ -17,7 +17,7 @@ function addBookToLibrary(title, author,pageNum) {
   myLibrary.push(aBook);
 };
 
-let main = document.querySelector(".main");
+let cardDiv = document.querySelector(".card-div");
 
 //function that loops through array and displays book on page
 function displayBook() {
@@ -27,7 +27,7 @@ function displayBook() {
         //give it card class name
         newCard.classList.add("card");
         //append to main
-        main.appendChild(newCard);
+        cardDiv.appendChild(newCard);
     }
 }
 

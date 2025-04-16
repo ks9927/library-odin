@@ -47,6 +47,11 @@ form {
     padding: 20px;
 }
 
+.card-div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
 .card {
     width: 250px;
     height: 250px;
