@@ -8,12 +8,16 @@ body {
     min-height: 100vh;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
 .sidebar {
     background-color: #bd574f;
     color: #17181b;
     display: flex;
     flex-direction: column;
-    width: 35%;
     padding: 25px;
 }
 
@@ -26,4 +30,8 @@ form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.main {
+    background-color: blue;
 }
