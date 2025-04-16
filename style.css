@@ -43,3 +43,12 @@ form {
     background-color: pink;
     border-radius: 20px;
 }
+
+.submit-btn {
+    background-color: #17181b;
+    color: white;
+    padding: 10px;
+    border: solid 1px #17181b;
+    border-radius: 15px;
+    margin-top: 10px;
+}
