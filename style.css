@@ -13,7 +13,7 @@ body {
     color: #17181b;
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 35%;
     padding: 25px;
 }
 
@@ -25,4 +25,5 @@ form {
     outline: 1px solid black;
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
