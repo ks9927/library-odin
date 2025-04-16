@@ -26,6 +26,7 @@ body {
     color: var(--dark-purple);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 25px;
 }
 
@@ -36,7 +37,9 @@ label{
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    margin-top: 20px;
+    font-size: 1.2rem;
 }
 
 .main {
