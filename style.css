@@ -6,7 +6,6 @@
 
 body {
     min-height: 100vh;
-    background-color: lightcoral;
 }
 
 .container {
@@ -27,12 +26,20 @@ label{
 }
 
 form {
-    outline: 1px solid black;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-top: 20px;
 }
 
 .main {
-    background-color: blue;
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+.card {
+    width: 250px;
+    height: 250px;
+    background-color: pink;
+    border-radius: 20px;
 }
