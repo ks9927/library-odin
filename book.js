@@ -1,4 +1,8 @@
-const myLibrary = [];
+const myLibrary = [
+        { title: "The Hobbit", author: "J.R.R. Tolkien", pageNum: 310 },
+        { title: "1984", author: "George Orwell", pageNum: 328 }
+      
+];
 
 function Book(title, author, pageNum) {
   this.title = title;
@@ -12,3 +16,19 @@ function addBookToLibrary(title, author,pageNum) {
   let aBook = new Book(title, author, pageNum);
   myLibrary.push(aBook);
 };
+
+let main = document.querySelector(".main");
+
+//function that loops through array and displays book on page
+function displayBook() {
+    for(let i = 0; i < myLibrary.length; i++) {
+        //create a card
+        let newCard = document.createElement("div");
+        //give it card class name
+        newCard.classList.add("card");
+        //append to main
+        main.appendChild(newCard);
+    }
+}
+
+displayBook();
