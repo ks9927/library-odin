@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: #bd574f;
+    color: #17181b;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 25px;
+}
+
+label{
+    font-weight: bold;
+}
+
+form {
+    outline: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
