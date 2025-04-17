@@ -57,6 +57,9 @@ form {
     height: 250px;
     background-color: var(--pink);
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .submit-btn {
@@ -77,6 +80,11 @@ form {
 
 .book-info {
     outline: 2px solid black;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
