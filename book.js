@@ -1,4 +1,4 @@
-const myLibrary = [
+let myLibrary = [
         { title: "The Hobbit", author: "J.R.R. Tolkien", pageNum: 310 },
         { title: "1984", author: "George Orwell", pageNum: 328 }
       
@@ -49,6 +49,10 @@ function displayBook() {
 
         readLabel.textContent = "Read?";
         deleteBtn.textContent = "Delete Book";
+
+        //book ID
+        deleteBtn.setAttribute("data-id", myLibrary[i].id);
+
         //append 
         cardDiv.appendChild(newCard);
         newCard.appendChild(bookInfoDiv);
@@ -59,11 +63,23 @@ function displayBook() {
         readDiv.appendChild(readLabel);
         readDiv.appendChild(readCheck);
         newCard.appendChild(deleteBtn);
+
+        //event listener for delete btn
+        deleteBtn.addEventListener("click", (event) => {
+            let bookId = event.target.getAttribute("data-id");
+            removeBookFromLibrary(bookId);
+        })
         
     }
 }
 
 displayBook();
+
+function removeBookFromLibrary(bookId) {
+    // Find the book by ID and remove it from the array
+    myLibrary = myLibrary.filter(book => book.id !== bookId);
+    displayBook(); // Refresh the display
+}
 
 //event listener for submit button
 let submitBtn = document.querySelector(".submit-btn");
@@ -78,6 +94,6 @@ submitBtn.addEventListener("click", (event) => {
     let formBook = new Book(formTitle, formAuthor, formPages);
     myLibrary.push(formBook);
 
-    cardDiv.innerHTML - "";
+    cardDiv.innerHTML = "";
     displayBook();
-})
+});
