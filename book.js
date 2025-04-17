@@ -18,16 +18,34 @@ function addBookToLibrary(title, author,pageNum) {
 };
 
 let cardDiv = document.querySelector(".card-div");
-
 //function that loops through array and displays book on page
 function displayBook() {
     for(let i = 0; i < myLibrary.length; i++) {
         //create a card
         let newCard = document.createElement("div");
+        //create a div
+        let bookInfoDiv = document.createElement("div");
+        bookInfoDiv.classList.add("book-info");
         //give it card class name
         newCard.classList.add("card");
-        //append to main
+
+        //create text to add to card
+        let bookTitle = document.createElement("h3");
+        bookTitle.textContent = `${myLibrary[i].title}`;
+
+        let bookAuthor = document.createElement("p");
+        bookAuthor.textContent = `${myLibrary[i].author}`;
+
+        let pageNumber = document.createElement("p");
+        pageNumber.textContent = `${myLibrary[i].pageNum}`;
+
+        //append 
         cardDiv.appendChild(newCard);
+        newCard.appendChild(bookInfoDiv);
+        bookInfoDiv.appendChild(bookTitle);
+        bookInfoDiv.appendChild(bookAuthor);
+        bookInfoDiv.appendChild(pageNumber);
+        
     }
 }
 
