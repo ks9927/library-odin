@@ -28,12 +28,14 @@ function displayBook() {
         let readDiv = document.createElement("div");
         let readLabel = document.createElement("label");
         let readCheck = document.createElement("input");
+        let deleteBtn = document.createElement("button");
          //give it card class name
         bookInfoDiv.classList.add("book-info");
         newCard.classList.add("card");
         readDiv.classList.add("read-checkmark");
         readLabel.classList.add("read-label")
         readCheck.type = "checkbox";
+        deleteBtn.classList.add("delete-btn");
 
         //create text to add to card
         let bookTitle = document.createElement("h3");
@@ -46,6 +48,7 @@ function displayBook() {
         pageNumber.textContent = `${myLibrary[i].pageNum}`;
 
         readLabel.textContent = "Read?";
+        deleteBtn.textContent = "Delete Book";
         //append 
         cardDiv.appendChild(newCard);
         newCard.appendChild(bookInfoDiv);
@@ -55,6 +58,7 @@ function displayBook() {
         bookInfoDiv.appendChild(pageNumber);
         readDiv.appendChild(readLabel);
         readDiv.appendChild(readCheck);
+        newCard.appendChild(deleteBtn);
         
     }
 }

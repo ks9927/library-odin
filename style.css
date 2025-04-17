@@ -72,6 +72,7 @@ form {
     margin-top: 10px;
     font-weight: bold;
     font-size: 1rem;
+    cursor: pointer;
 }
 .main h1 {
     text-align: center;
@@ -98,4 +99,15 @@ form {
 
 .read-label {
     margin-right: 10px;
+}
+
+.delete-btn {
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    background-color: rgb(100, 26, 26);
+    border: solid 1px rgb(100, 26, 26);
+    margin-top: 10px;
+    font-weight: bold;
+    cursor: pointer;
 }
