@@ -81,7 +81,6 @@ form {
 }
 
 .book-info {
-    outline: 2px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,7 +90,6 @@ form {
 }
 
 .read-checkmark {
-    outline: 2px solid blue;
     display: flex;
     justify-content: center;
     align-items: center;
