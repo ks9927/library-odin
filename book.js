@@ -21,12 +21,12 @@ let cardDiv = document.querySelector(".card-div");
 //function that loops through array and displays book on page
 function displayBook() {
     for(let i = 0; i < myLibrary.length; i++) {
-        //create a card
+        //create an element
         let newCard = document.createElement("div");
-        //create a div
         let bookInfoDiv = document.createElement("div");
+        
+         //give it card class name
         bookInfoDiv.classList.add("book-info");
-        //give it card class name
         newCard.classList.add("card");
 
         //create text to add to card
