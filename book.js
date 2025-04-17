@@ -20,11 +20,12 @@ function addBookToLibrary(title, author,pageNum) {
 let cardDiv = document.querySelector(".card-div");
 //function that loops through array and displays book on page
 function displayBook() {
+    cardDiv.innerHTML = "";
     for(let i = 0; i < myLibrary.length; i++) {
         //create an element
         let newCard = document.createElement("div");
         let bookInfoDiv = document.createElement("div");
-        
+
          //give it card class name
         bookInfoDiv.classList.add("book-info");
         newCard.classList.add("card");
@@ -50,3 +51,20 @@ function displayBook() {
 }
 
 displayBook();
+
+//event listener for submit button
+let submitBtn = document.querySelector(".submit-btn");
+submitBtn.addEventListener("click", (event) => {
+    //prevent from refreshing
+    event.preventDefault();
+    //get form input values
+    let formTitle = document.getElementById("title").value;
+    let formAuthor = document.getElementById("author").value;
+    let formPages = document.getElementById("page-num").value;
+
+    let formBook = new Book(formTitle, formAuthor, formPages);
+    myLibrary.push(formBook);
+
+    cardDiv.innerHTML - "";
+    displayBook();
+})
