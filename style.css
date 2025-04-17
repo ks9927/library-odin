@@ -58,6 +58,7 @@ form {
     background-color: var(--pink);
     border-radius: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -80,11 +81,21 @@ form {
 
 .book-info {
     outline: 2px solid black;
-    width: 150px;
-    height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 5px;
+    margin-bottom: 10px;
+}
+
+.read-checkmark {
+    outline: 2px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.read-label {
+    margin-right: 10px;
 }
