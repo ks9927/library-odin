@@ -9,7 +9,12 @@ function Book(title, author, pageNum) {
   this.author = author;
   this.pageNum = pageNum;
   this.id = crypto.randomUUID();
+  this.read = false;
 };
+
+Book.prototype.toggleRead = function() {
+    this.read = !this.read;
+}
 
 function addBookToLibrary(title, author,pageNum) {
   // take params, create a book then store it in the array
@@ -53,6 +58,9 @@ function displayBook() {
         //book ID
         deleteBtn.setAttribute("data-id", myLibrary[i].id);
 
+        //checkbox
+        readCheck.checked = myLibrary[i].read;
+
         //append 
         cardDiv.appendChild(newCard);
         newCard.appendChild(bookInfoDiv);
@@ -68,7 +76,12 @@ function displayBook() {
         deleteBtn.addEventListener("click", (event) => {
             let bookId = event.target.getAttribute("data-id");
             removeBookFromLibrary(bookId);
-        })
+        });
+
+        //checkbox event listener
+        readCheck.addEventListener("change", () => {
+            myLibrary[i].toggleRead(); // Use the prototype method to toggle read status
+        });
         
     }
 }
